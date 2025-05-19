@@ -16,13 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.shortcuts import render
+# from . import views
 
 
+
+def home_page(request):
+    return render(request,'home.html')
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('service.urls')),
+    path('',home_page),
     path('',include('appointment.urls'))
 ]
+

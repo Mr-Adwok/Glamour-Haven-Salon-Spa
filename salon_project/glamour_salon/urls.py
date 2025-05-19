@@ -30,6 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('service.urls')),
     path('',home_page),
-    path('',include('appointment.urls'))
+    path('',include('appointment.urls')),
+    path('',include('accounts.urls')),
 ]
 

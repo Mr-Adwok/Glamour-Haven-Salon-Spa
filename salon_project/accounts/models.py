@@ -10,6 +10,7 @@ class CustomUser(AbstractUser):
     full_name = models.CharField(max_length = 200, null = True)
     email = models.EmailField(_("email address"), unique=True)
     phone = models.CharField(max_length = 200, null = True )
+    is_customer = models.BooleanField(default = True)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 

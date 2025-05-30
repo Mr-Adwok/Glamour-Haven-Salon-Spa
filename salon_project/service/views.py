@@ -12,7 +12,7 @@ from rest_framework.permissions import IsAuthenticated
 @api_view(["POST"])
 def all_service(request,id):
     # serializer = Appointment_Service(request.data)
-    my_object = Service.Objects.all()
+    my_object = Service.objects.all()
     serializer = Service_Serializer(my_object,many  = True)
     return Response(serializer.data)
 

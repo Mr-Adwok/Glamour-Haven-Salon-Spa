@@ -5,7 +5,7 @@ from service.models import Service
 
 class Appointment(models.Model):
     service = models.ForeignKey(Service, on_delete = models.DO_NOTHING)
-    stylist = models.CharField(max_length  = 200)
+    # stylist = models.CharField(max_length  = 200)
     date = models.DateField()
     time = models.TimeField()
     special_request = models.CharField(max_length = 500)

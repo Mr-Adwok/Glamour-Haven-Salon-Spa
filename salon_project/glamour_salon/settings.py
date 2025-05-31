@@ -28,15 +28,14 @@ SECRET_KEY = 'django-insecure-5g+3w$6*3%qmjl!#bsb2p5^0j)py07f@ep)3t3)mcvwt^qa*ok
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "192.168.1.139"]
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://example.com",
-    "https://sub.example.com",
-    "http://localhost:8080",
-    "http://127.0.0.1:9000",
+    "http://192.168.1.64:3000",
     "http://localhost:3000",
+    "http://127.0.0.1:3000",
+
 ]
 
 CORS_ALLOW_METHODS = (
@@ -164,7 +163,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ),
 }

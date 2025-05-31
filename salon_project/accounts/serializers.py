@@ -19,3 +19,10 @@ class SignUp_Serializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         return user
+
+class CustomUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['id', 'email', 'full_name', 'phone', 'is_customer']
+        read_only_fields = ['id']
+

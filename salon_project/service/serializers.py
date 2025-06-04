@@ -2,7 +2,10 @@ from rest_framework import serializers
 from .models import Service
 
 
-class Service_Serializer(serializers.ModelSerializer):
+class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Service
-        fields = '__all__'
+        fields = ["id","name", "description", "price", "category", "image", "featured"]
+        read_on_fields = ["id"]
+
+
